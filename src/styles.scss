@@ -1,8 +1,27 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand&display=swap');
 $color: #242415;
 .fondo {
     background-color: $color;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
 }
 
-.font-color {
+#txtContainer {
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 700;
     color: #fff;
+    font-size: 38px;
+    line-height: 1.15;
+    letter-spacing: -.02em;
+    -webkit-font-smoothing: antialiased;
+}
+
+img {
+    width: 300px;
+    -webkit-filter: drop-shadow(3px 3px 3px #000);
+    filter: drop-shadow(3px 3px 3px #000);
 }

@@ -1,23 +1,29 @@
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const path = require("path");
 
 module.exports = {
     context: path.resolve(__dirname, "./src"),
     entry: {
-        app: "./index.js",
+        app: "./index.tsx",
         vendorStyles: ["../node_modules/bootstrap/dist/css/bootstrap.css"],
     },
     output: {
         filename: "[name].[chunkhash].js",
         path: path.resolve(__dirname, "dist"),
     },
+    resolve: {
+        extensions: [".js", ".ts", ".tsx"]
+    },
     module: {
         rules: [{
-                test: /\.js$/,
+                test: /\.tsx?$/,
                 exclude: /node_modules/,
                 loader: "babel-loader",
+            },
+            {
+                test: /\.(png|jpg)$/,
+                type: 'asset/resource'
             },
             {
                 test: /\.scss$/,
@@ -29,14 +35,13 @@ module.exports = {
                 use: ["style-loader", "css-loader"],
             },
             {
-                test: /\.(png|jpg)$/,
-                type: "asset/resource",
-            },
-            {
                 test: /\.html$/,
                 loader: "html-loader",
             },
         ],
+    },
+    devServer: {
+        static: path.join(__dirname, "./src"),
     },
     plugins: [
         //Generate index.html in /dist => https://github.com/ampedandwired/html-webpack-plugin
@@ -44,14 +49,11 @@ module.exports = {
             filename: "index.html", //Name of file in ./dist/
             template: "./index.html", //Name of template in ./src
             scriptLoading: "blocking", // Just use the blocking approach (no modern defer or module)
+            hash: true
         }),
         new MiniCssExtractPlugin({
             filename: "[name].css",
             chunkFilename: "[id].css",
-        }),
-        new CleanWebpackPlugin(),
-    ],
-    devServer: {
-        static: path.join(__dirname, "./src"),
-    },
+        })
+    ]
 };

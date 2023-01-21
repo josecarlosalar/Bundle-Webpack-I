@@ -1,0 +1,32 @@
+/*!********************************************************************************************************!*\
+  !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./styles.scss ***!
+  \********************************************************************************************************/
+@import url(https://fonts.googleapis.com/css?family=Quicksand&display=swap);
+/*!************************************************************************************************************!*\
+  !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./styles.scss (1) ***!
+  \************************************************************************************************************/
+.fondo {
+  background-color: #242415;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+
+#txtContainer {
+  font-family: "Quicksand", sans-serif;
+  font-weight: 700;
+  color: #fff;
+  font-size: 38px;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  width: 300px;
+  -webkit-filter: drop-shadow(3px 3px 3px #000);
+  filter: drop-shadow(3px 3px 3px #000);
+}
