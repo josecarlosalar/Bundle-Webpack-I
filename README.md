@@ -1,6 +1,6 @@
 ## Bundling Webpack
 
-Bundler creado desde cero con las siguientes caracteristicas:
+Bundler creado desde cero en Webpack incluyendo las siguientes caracteristicas:
 
 - Servidor Web local con hot reload.
 - Generación de carpeta de producción.
