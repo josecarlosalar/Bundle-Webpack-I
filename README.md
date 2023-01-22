@@ -1,11 +1,11 @@
-## Bundling Webpack
+## Bundle Webpack
 
-Bundler creado desde cero en Webpack incluyendo las siguientes caracteristicas:
+Bundle creado desde cero en Webpack incluyendo las siguientes caracteristicas:
 
-- Servidor Web local con hot reload.
+- Servidor Web local con hot-reload.
 - Generación de carpeta de producción.
 - Integración con librería Twitter Bootstrap.
-- Soporte con preprocesador Sass.
+- Soporte con Sass.
 - Soporte para la gestión de recursos estáticos como imágenes y volcado automático a carpeta de producción.
 - Soporte para Typescript.
 
