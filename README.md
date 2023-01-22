@@ -1,4 +1,4 @@
-## Bundle Webpack
+## Bundle Webpack - Lab Básico - Lemoncode
 
 Bundle creado desde cero en Webpack incluyendo las siguientes caracteristicas:
 
